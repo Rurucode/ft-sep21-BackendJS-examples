@@ -1,28 +1,32 @@
-const data = require('../models/product') // Leer los datos
+const dataProduct = require('../utils/product')
+//const data = require('../models/product') // Leer los datos del array
 //console.log(data); // lee el array de datos
 
-const getProduct = (req,res) => {
+const getProduct = async (req,res) => {
     console.log("*******************");
     console.log(req.params);
 
     // Consulta 
     // Los datos
     // del producto correspondiente
-    // ...
-    // ...
-
+    let data;
     if(req.params.id){
-        res.render('product', {products:[data[req.params.id]]}) // Creo un array con 1 dato
+        data = await dataProduct.getProductById(req.params.id);
+        res.render('product', {products:[data]}) // Creo un array con 1 dato
     } else{
+        data = await dataProduct.getAllProducts();
         res.render('product',{products:data}) // Envio un array con N datos
     }
 }
 
-const createProduct = (req,res) => {
+const createProduct = async (req,res) => {
     console.log("***************");
     // Se guardaran cosas en la BBDD
-    console.log(req.body);
-    res.status(201).send('Nuevo producto creado');
+    console.log(req.body); // En req.body está el objeto a guardar
+    const result = await dataProduct.createProduct(req.body)
+    console.log("Producto creado!!!!!**************");
+    console.log(result);
+    res.status(201).json(result);
 }
 
 const product = {

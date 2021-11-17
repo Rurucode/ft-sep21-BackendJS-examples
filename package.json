@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^3.1.0",
+    "nodemon": "^2.0.15",
+    "pug": "^3.0.2"
+  },
+  "name": "ft-sep21-backendjs-examples",
+  "description": "![npminstall!](./assets/npminstall.jpg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rurucode/ft-sep21-BackendJS-examples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rurucode/ft-sep21-BackendJS-examples/issues"
+  },
+  "homepage": "https://github.com/Rurucode/ft-sep21-BackendJS-examples#readme"
+}

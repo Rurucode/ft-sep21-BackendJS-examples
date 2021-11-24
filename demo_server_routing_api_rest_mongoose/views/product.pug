@@ -1,0 +1,19 @@
+doctype html
+html
+   head
+      title="Vista de producto"
+   body
+    include ./header.pug
+    
+    section
+        each product in products
+                article
+                    h3 Producto #{product.id}
+                    p Se renderizan los datos del producto con ID: #{product.id}
+                    p Titulo: #{product.title}
+                    p Precio: #{product.price}
+                    p descripcion: #{product.description}
+                    img(src=product.image, alt=product.title)
+
+    include ./footer.pug
+        

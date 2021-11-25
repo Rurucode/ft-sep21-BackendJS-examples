@@ -1,0 +1,25 @@
+{
+  "name": "demo_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13",
+    "node-fetch": "^2.6.6",
+    "pg": "^8.7.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  }
+}

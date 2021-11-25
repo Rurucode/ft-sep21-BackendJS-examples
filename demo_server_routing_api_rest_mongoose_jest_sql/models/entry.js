@@ -1,9 +1,9 @@
 const { Pool } = require('pg');
 const pool = new Pool({
-    user: "postgres",
-    host: "localhost",
-    database: "postgres",
-    password: "1234"
+    user: process.env.USER,
+    host: process.env.HOST,
+    database: process.env.DATABASE,
+    password: process.env.PASSWORD
 })
 
 /* 
@@ -73,7 +73,9 @@ const createEntry = async (entry) => {
 const entries = {
     getEntriesByEmail,
     getAllEntries,
-    createEntry
+    createEntry,
+    //deleteEntry
+    //updateEntry
 }
 
 module.exports = entries;
@@ -90,10 +92,12 @@ getAllEntries()
 */
 
 // entry --> {"noticia 1","va a nevar","sucesos"}
+/*
 let newEntry = {title:"noticia desde Node",content:"va a triunfar esto",category:"sucesos"}
 
 createEntry(newEntry,"alejandro@thebridgeschool.es")
 .then(data=>console.log(data))
+*/
 
 
 

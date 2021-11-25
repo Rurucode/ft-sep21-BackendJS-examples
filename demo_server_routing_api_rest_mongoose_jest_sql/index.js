@@ -1,10 +1,11 @@
 const express = require('express')
+require('dotenv').config() // carga fichero variables de entorno
 const productRouter = require('./routes/product')
 const productApiRouter = require('./routes/productApi')
 const entryApiRouter = require('./routes/entryApi')
 const errors = require('./middlewares/errors')
 
-require('dotenv').config() // carga fichero variables de entorno
+
 require('./utils/dbmongo') // Lanzar la BBDD Mongo
 
 const app = express()

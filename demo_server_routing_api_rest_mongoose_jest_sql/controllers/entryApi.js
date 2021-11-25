@@ -40,8 +40,8 @@ const createEntry = async (req,res) => {
     }  
 }
 
-const product = {
+const entries = {
     getEntries,
     createEntry
 }
-module.exports = product;
+module.exports = entries;
